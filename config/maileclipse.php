@@ -12,7 +12,18 @@ return [
     */
 
     'path' => 'maileclipse',
+    
+    /*
+    |--------------------------------------------------------------------------
+    | Register Routes in ServiceProvider
+    |--------------------------------------------------------------------------
+    |
+    | This confirms if you can register the routes or not
+    |
+    */
 
+    'register_routes' => false,
+    
     /*
     |--------------------------------------------------------------------------
     | Application Mailables Directory
