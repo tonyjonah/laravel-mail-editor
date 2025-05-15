@@ -19,7 +19,9 @@ class MailEclipseServiceProvider extends ServiceProvider
 
         $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'maileclipse');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'maileclipse');
-        $this->registerRoutes();
+        if (config('mailecliplse.register_routes') == true) {
+            $this->registerRoutes();
+        }
 
         // Publishing is only necessary when using the CLI.
         if ($this->app->runningInConsole()) {
